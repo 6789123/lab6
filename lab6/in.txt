@@ -1,0 +1,26 @@
+Yashin 1 Pentium 1024 out 32 sas 1 23 1 2 windows
+Bondarenko 2 Pentium 2048 in 32 sas 1 23 1 2 linux
+Sobol 1 Pentium  2048 in 32 sas 1 23 1 2 mac_os
+
+Zhdanov 1 Pentium 1024 out 32 sas 1 23 1 2 windows
+Volkov 2 Pentium 2048 in 32 sas 1 23 1 2 linux
+Milov 1 Pentium 2048 in 32 sas 1 23 1 2 mac_os
+
+Alburov 1 Pentium 1024 out 32 sas 1 23 1 2 windows
+Katz 2 Pentium 2048 in 32 sas 1 23 1 2 linux
+Guriev 1 Pentium 2048 in 32 sas 1 23 1 2 mac_os
+
+Chanusheva 1 Pentium 1024 out 32 sas 1 23 1 2 windows
+Svetov 2 Pentium 2048 in 32 sas 1 23 1 2 linux
+Kasyanov 1 Pentium 2048 in 32 sas 1 23 1 2 mac_os
+
+Magnitov 1 Pentium 1024 out 32 sas 1 23 1 2 windows
+Fadeev 2 Pentium 2048 in 32 sas 1 23 1 2 linux
+Boyko 1 Pentium 2048 in 32 sas 1 23 1 2 mac_os
+
+Kasparov 1 Pentium 1024 out 32 sas 1 23 1 2 windows
+Roysman 2 Pentium 2048 in 32 sas 1 23 1 2 linux
+Volkov 1 Pentium 2048 in 32 sas 1 23 1 2 mac_os
+
+Vorsin 1 Pentium 1024 out 32 sas 1 23 1 2 windows
+Grudina 1 Pentium 2048 in 32 sas 1 23 1 2 mac_os
