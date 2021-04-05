@@ -5,6 +5,8 @@
 #include "pers.h"
 #include <iostream>
 #include <malloc.h>
+#include <set>
+
 
 using namespace std;
 
@@ -13,27 +15,45 @@ void p_gap(int l, char* b);
 int taker(int n, char* base)
 {
 	users p, p_u;
-	users* dubls = new users[n];
 
 	FILE* data = fopen(base, "r");
+	
+	set<string> names;
+
+	int tp;
 	int count = 0, count_u = 0;
-	cout << "Самые мощные компьютеры:\n";
+	cout << "\nOwners of the most powerful comuters:\n\n";
+	printf("=======================================================================================================================================================================\n");
+	printf("|   surname   |processor number|processor type|memory volume|videocontroller|v_volume|type|num vinch|vol vinch|num interated controllers|num out devices|operation sys|\n");
+	printf("=======================================================================================================================================================================\n");
+
 	while (fread(&p, 1, sizeof(p), data))
 	{
-		while (fread(&p_u, 1, sizeof(p_u), data))
+		users* dubls = new users[n];
+		FILE* data_u = fopen(base, "r");
+		tp = 0;
+		while (fread(&p_u, 1, sizeof(p_u), data_u))
 		{
-			if (p.surname == p_u.surname && count != count_u)
+			if (strcmp(p.surname, p_u.surname) == 0 && count != count_u)
 			{
-				dubls[count_u] = p;
+				dubls[tp] = p_u;
+				tp++;
 			}
 			count_u++;
+		}
+
+		if (tp == 0)
+		{
+			count_u = 0;
+			count++;
+			continue;
 		}
 
 		int k = 0, m = 0;
 
 		for (int i=0; i < n; i++)
 		{
-			if (dubls[i].surname != 0)
+			if (dubls[i].memory != -842150451)
 			{
 				if (k < dubls[i].number * dubls[i].memory)
 				{
@@ -41,6 +61,15 @@ int taker(int n, char* base)
 					m = i;
 				}
 			}
+		}
+
+		int siz = names.size();
+		names.insert(dubls[m].surname);
+		if (siz == names.size())
+		{
+			count_u = 0;
+			count++;
+			continue;
 		}
 
 		char s[80];
@@ -79,10 +108,14 @@ int taker(int n, char* base)
 
 		cout << "\n";
 
-		memset(dubls, 0, sizeof dubls);
+		delete[] dubls;
+
+		fclose(data_u);
 
 		count_u = 0;
 		count++;
 	}
+	printf("=======================================================================================================================================================================\n");
+
 	return 0;
 }
