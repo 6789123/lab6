@@ -3,6 +3,7 @@
 
 #pragma once
 int taker();
+void p_gap(int l, char* s);
 const int sur_l = 50;
 
 typedef struct
