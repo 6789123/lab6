@@ -2,7 +2,6 @@
 #include "pers.h"
 #include<stdio.h>  
 #include<string>
-#include "pers.h"
 #include <iostream>
 #include <malloc.h>
 #include <set>
@@ -22,7 +21,7 @@ int taker(int n, char* base)
 
 	int tp;
 	int count = 0, count_u = 0;
-	cout << "\nOwners of the most powerful comuters:\n\n";
+	cout << "\nThe modt powerful computers:\n\n";
 	printf("=======================================================================================================================================================================\n");
 	printf("|   surname   |processor number|processor type|memory volume|videocontroller|v_volume|type|num vinch|vol vinch|num interated controllers|num out devices|operation sys|\n");
 	printf("=======================================================================================================================================================================\n");
